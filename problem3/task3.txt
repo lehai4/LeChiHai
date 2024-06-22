@@ -1,0 +1,11 @@
+1./ List out the computational inefficiencies and anti-patterns found in the code block below.
+
+** Summary **
+- The children prop is destructured from props but never used. If it's not needed, you can remove it.
+- Use blockchain property not exist in interface "WalletBalance". I can add blockchain property into interface "WalletBalance"
+- Many functions or components are not defined, I guess it must be imported from somewhere.
+- Use variables when not declared. I can declare varible before used to it
+- Assign a specific interface "blockchainProp" instead of use "any" type
+- Unnecessary formattedBalances: The creation of the formattedBalances array introduces overhead. The toFixed() formatting can be done directly when rendering the rows.
+- Repeat the function getPriority many times
+- Price value is in dependency of useMemo not need, because callback of useMemo not use value price and does not affect the callback process
